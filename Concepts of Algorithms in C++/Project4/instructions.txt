@@ -1,0 +1,50 @@
+/*
+
+Project 4
+
+1.    Rewrite Project 3 using an array of objects, rather
+than the three parallel arrays of Project#3.
+
+Create a class named inventory, there are 3 data fields:
+
+itemId, storeNr and quantity. Design the necessary header file and implementation file.
+
+2.  Write three C++ functions as described below:
+
+      The variables listed below have the following meaning:
+      fileName     - the Windows name of the file created in step 1
+      newFileName - the Windows file name of the extracted records
+      requestId   - the product id number used to extract data
+      ORDER_VALUE  - the quantity value used to extract data, make this
+                     a global constant with a value of 500 
+      invList     - the array of inventory objects
+      count       - the actual number of cells filled in the array
+      newcount    - the number of extracted records written to newFileName
+
+a)    bool  loadArray(char fileName[], inventory invList[],
+                          int & count, int maxCells)
+            Will load the object array, invList, from the disk file and use count for the number of cells loaded.  Be certain to check that you do not load more cells than you have dimensioned.
+            Return true if you were able to load all of the data,
+            return false otherwise.  The variable count will hold the
+            number of cells loaded.
+
+b)    void printArray(ostream & where, const inventory invList[], int count)
+
+            Will print to the stream where the data in the array of
+            objects.  Count tells the number of cells filled.
+
+c)  bool extractData(char newFileName[],int requestId, int baseQty,
+               const inventory invList[], int  count, int & newcount)
+            Will use the value in requestId to write only the records with that id number that have a quantity below baseQty to the new file. The variable newcount will hold the number of records actually written.  The return value will be false if the
+            file could not be opened, otherwise the return value will be true.
+
+3.  Write a main program to test the three functions.  Always check to see that a file was successfully opened.  If the file was NOT successfully opened, write an error message and exit the program.
+
+4.  Turn in:
+- C++ source program
+- Two execution outputs – one with all data loaded and one
+- where there was not room for all data.
+- A printed copy of your file created in step 1
+- A printed copy of the file created by extractData
+*/ 
+
